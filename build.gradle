@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // REST Assured for API testing
+    testImplementation 'io.rest-assured:rest-assured:5.3.0'
+
+    // JSON Path for parsing JSON responses
+    testImplementation 'io.rest-assured:json-path:5.3.0'
+
+    // TestNG for running tests
+    testImplementation 'org.testng:testng:7.7.1'
+}
+
+test {
+    useTestNG()
+}
