@@ -26,7 +26,7 @@ public class ApiTest {
 
         request.header("Content-Type", "application/json");
         request.header("Accept", "application/json");
-        request.body("{ \"email\": \"ahsansayel@gmail.com\", \"Ahsan@1234\": \"your_password\" }");
+        request.body("{ \"email\": \"ahsansayel@gmail.com\", \"password\": \"Ahsan@1234\" }");
 
         Response response = request.post("/rest/user/login");
         response.then().statusCode(200);
